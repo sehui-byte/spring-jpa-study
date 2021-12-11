@@ -5,19 +5,20 @@ import example.logic.MemberLogic;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ContextConfiguration;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
-@SpringBootTest
+@SpringBootTest(classes = JpaStudyApplicationTest.class)
 class MemberLogicTest {
     //
     @Autowired
     private MemberLogic memberLogic;
 
-    @Test
-    void contextLoads() {
-    }
+//    @Test
+//    void contextLoads() {
+//    }
 
     @Test
     void save() {

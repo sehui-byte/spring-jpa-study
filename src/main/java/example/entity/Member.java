@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 
@@ -15,7 +16,8 @@ import javax.persistence.*;
 public class Member {
     //
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(generator = "USER_GENERATOR")
+    @GenericGenerator(name = "USER_GENERATOR", strategy = "uuid")
     private String id;
     @Column(name = "NAME")
     private String username;

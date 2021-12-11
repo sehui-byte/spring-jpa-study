@@ -4,16 +4,16 @@ plugins {
 
 dependencies {
     implementation 'org.junit.jupiter:junit-jupiter:5.4.2'
-    implementation('org.bgee.log4jdbc-log4j2:log4jdbc-log4j2-jdbc4.1:1.16')
+//    implementation('org.bgee.log4jdbc-log4j2:log4jdbc-log4j2-jdbc4.1:1.16')
 
-    implementation('com.querydsl:querydsl-core')
-    implementation('com.querydsl:querydsl-jpa')
-    compileOnly('com.querydsl:querydsl-apt')
+
+//    implementation('com.querydsl:querydsl-core')
+//    implementation('com.querydsl:querydsl-jpa')
+//    compileOnly('com.querydsl:querydsl-apt')
 
     implementation('com.h2database:h2')
-
     testImplementation('org.junit.jupiter:junit-jupiter-engine')
-    testImplementation('com.h2database:h2')
+
 }
 
 test {
@@ -25,27 +25,3 @@ test {
 
 
 
-// querydsl 설정
-def querydslDir = "$buildDir/generated/querydsl/" // QClass 생성 위치
-
-querydsl {
-//    library = "com.querydsl:querydsl-apt"
-    jpa = true
-    querydslSourcesDir = querydslDir
-}
-
-sourceSets {
-    main.java.srcDir querydslDir
-}
-
-compileQuerydsl {
-    options.annotationProcessorPath = configurations.querydsl
-}
-
-configurations {
-    querydsl.extendsFrom compileClasspath
-
-    compileOnly {
-        extendsFrom annotationProcessor
-    }
-}
