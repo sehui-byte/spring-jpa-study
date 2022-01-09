@@ -1,6 +1,5 @@
-package example.entity;
+package jpa.entity;
 
-import jdk.jfr.StackTrace;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

@@ -1,13 +1,12 @@
-package example;
+package jpa;
 
-import example.entity.Member;
-import example.entity.MemberSort;
-import example.logic.MemberLogic;
+import jpa.entity.Member;
+import jpa.entity.MemberSort;
+import jpa.logic.MemberLogic;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.Page;
-import org.springframework.test.context.ContextConfiguration;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,6 +1,6 @@
-package example.repository;
+package jpa.repository;
 
-import example.entity.Member;
+import jpa.entity.Member;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

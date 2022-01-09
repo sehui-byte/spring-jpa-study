@@ -1,12 +1,11 @@
-package example;
+package jpa;
 
-import example.entity.CompositeKey;
-import example.entity.CompositeKeyTestEntity;
-import example.repository.CompositeKeyTestRepository;
+import jpa.entity.CompositeKey;
+import jpa.entity.CompositeKeyTestEntity;
+import jpa.repository.CompositeKeyTestRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
 
 @SpringBootTest(classes = JpaStudyApplicationTest.class)
 public class CompositeKeyTest {

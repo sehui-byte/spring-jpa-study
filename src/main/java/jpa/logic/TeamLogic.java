@@ -1,7 +1,7 @@
-package example.logic;
+package jpa.logic;
 
-import example.entity.Team;
-import example.repository.TeamRepository;
+import jpa.entity.Team;
+import jpa.repository.TeamRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

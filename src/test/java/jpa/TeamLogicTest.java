@@ -1,7 +1,7 @@
-package example;
+package jpa;
 
-import example.entity.Team;
-import example.logic.TeamLogic;
+import jpa.entity.Team;
+import jpa.logic.TeamLogic;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

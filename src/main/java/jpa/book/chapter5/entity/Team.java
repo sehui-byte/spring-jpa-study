@@ -1,4 +1,4 @@
-package book.chapter5;
+package jpa.book.chapter5.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

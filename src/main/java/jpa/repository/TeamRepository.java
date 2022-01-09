@@ -1,6 +1,6 @@
-package example.repository;
+package jpa.repository;
 
-import example.entity.Team;
+import jpa.entity.Team;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 

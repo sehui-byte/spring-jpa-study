@@ -1,11 +1,9 @@
-package example;
+package jpa;
 
-import book.chapter5.Member;
-import book.chapter5.Team;
-import org.aspectj.lang.annotation.Before;
+import jpa.book.chapter5.entity.Member;
+import jpa.book.chapter5.entity.Team;
 import org.junit.jupiter.api.*;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.*;
 

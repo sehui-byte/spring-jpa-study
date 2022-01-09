@@ -1,6 +1,5 @@
-package example.repository;
+package jpa.repository;
 
-import example.entity.CompositeKeyTestEntity;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
