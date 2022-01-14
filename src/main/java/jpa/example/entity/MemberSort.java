@@ -1,4 +1,4 @@
-package jpa.entity;
+package jpa.example.entity;
 
 public enum MemberSort {
     //

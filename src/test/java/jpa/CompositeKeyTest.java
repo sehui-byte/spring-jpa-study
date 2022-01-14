@@ -1,8 +1,8 @@
 package jpa;
 
-import jpa.entity.CompositeKey;
-import jpa.entity.CompositeKeyTestEntity;
-import jpa.repository.CompositeKeyTestRepository;
+import jpa.example.entity.CompositeKey;
+import jpa.example.entity.CompositeKeyTestEntity;
+import jpa.example.repository.CompositeKeyTestRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

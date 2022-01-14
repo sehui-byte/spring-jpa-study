@@ -1,4 +1,4 @@
-package jpa.entity;
+package jpa.example.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

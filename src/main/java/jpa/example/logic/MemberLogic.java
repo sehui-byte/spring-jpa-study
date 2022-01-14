@@ -1,8 +1,8 @@
-package jpa.logic;
+package jpa.example.logic;
 
-import jpa.entity.Member;
-import jpa.entity.MemberSort;
-import jpa.repository.MemberRepository;
+import jpa.example.entity.Member;
+import jpa.example.entity.MemberSort;
+import jpa.example.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

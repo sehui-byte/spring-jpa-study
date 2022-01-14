@@ -1,4 +1,4 @@
-package jpa.entity;
+package jpa.example.entity;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -21,6 +21,11 @@ public class Member {
     @Column(name = "NAME")
     private String username;
     private Integer age;
+
+    //항상 @ManyToOne이 연관관계의 주인이 된다
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "team_id", nullable = false)
+    private Team team;
 
     public Member(String username, Integer age) {
         this.username = username;

@@ -1,18 +1,24 @@
-package jpa;
+package jpa.example;
 
-import jpa.entity.Member;
-import jpa.entity.MemberSort;
-import jpa.logic.MemberLogic;
+import jpa.JpaStudyApplicationTest;
+import jpa.example.entity.Member;
+import jpa.example.entity.MemberSort;
+import jpa.example.entity.Team;
+import jpa.example.logic.MemberLogic;
+import jpa.example.repository.TeamRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.Page;
 
+import java.sql.Date;
+import java.time.Instant;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 
 @SpringBootTest(classes = JpaStudyApplicationTest.class)
@@ -20,20 +26,31 @@ class MemberLogicTest {
     //
     @Autowired
     private MemberLogic memberLogic;
+    @Autowired
+    private TeamRepository teamRepository;
 
 //    @Test
 //    void contextLoads() {
 //    }
 
     @Test
-    void save() {
+    void saveMember() {
         //
         Member member = new Member("홍길동", 30);
+        Team team = new Team(UUID.randomUUID().toString(), "홍길동팀",
+                "안녕하세요. 홍길동팀입니다.",
+                Date.valueOf("2021-01-09"));
+        String teamId = teamRepository.save(team).getId();
+        member.setTeam(team);
+
         String id = memberLogic.save(member);
-
         Member found = memberLogic.find(id);
+        Team foundTeam = found.getTeam();
 
-        assertEquals(member.getUsername(), found.getUsername());
+        assertNotNull(foundTeam.getName());
+        assertEquals(member.getTeam().getId(), teamId);
+
+//        assertEquals(member.getUsername(), found.getUsername());
     }
 
     @Test
